@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: web-rc
+  labels:
+    name: web
+    app: demo
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        name: web
+    spec:
+        containers:
+          - name: db
+            image: smahaboob/db
+            ports:
+              - containerPort: 3306
+                name: mysql
+                protocol: TCP
+          - name: tomcat
+            image: smahaboob/app1
+            env:
+              - name: "db"
+                value: "localhost"
+            ports:
+              - containerPort: 8080
+                name: http
+                protocol: TCP 
