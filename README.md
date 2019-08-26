@@ -32,3 +32,9 @@ Replicaion Controller Example
     kubectl apply -f replication_controller_svc.yaml
     kubectl get all -o wide
     kmaster:30020/employee-management-0.0.1-SNAPSHOT/employees
+    
+Replication Contoller and Service Example:
+-----------------------------------------
+https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
+
+
