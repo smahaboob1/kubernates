@@ -2,7 +2,6 @@ Create docker image from running container
 -----------------------------------------
 
     docker pull smahaboob/db
-
     docker run -dti --name mysqldb smahaboob/db
 
     docker exec -it mysqldb /bin/bash 
