@@ -1,29 +1,29 @@
 Create docker image from running container
 -----------------------------------------
 
-  docker pull smahaboob/db
+    docker pull smahaboob/db
 
-  docker run -dti --name mysqldb smahaboob/db
+    docker run -dti --name mysqldb smahaboob/db
 
-  docker exec -it mysqldb /bin/bash 
+    docker exec -it mysqldb /bin/bash 
 
-  mysql -u mysql -p
+    mysql -u mysql -p
 
-  use mysqldb 
+    use mysqldb 
 
-  insert new records
+    insert new records
 
-  INSERT INTO `department` VALUES (7,'V1','for Version 1 images');
+    INSERT INTO `department` VALUES (7,'V1','for Version 1 images');
 
-  INSERT INTO `employee` VALUES (5,'V1Lname1','V1Fname1',5),(6,'V1Lname2','V1Fname2',6);
+    INSERT INTO `employee` VALUES (5,'V1Lname1','V1Fname1',5),(6,'V1Lname2','V1Fname2',6);
 
-  docker commit mysqldb smahaboob/db:v1
+    docker commit mysqldb smahaboob/db:v1
 
-  docker images smahaboob/db:v1
+    docker images smahaboob/db:v1
 
-  docker login
+    docker login
 
-  docker push smahaboob/db:v1
+    docker push smahaboob/db:v1
 
  
 
