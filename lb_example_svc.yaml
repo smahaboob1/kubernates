@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: appversion1
+  labels:
+    name: appversion1
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    versions: app
+  type: LoadBalancer
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbversion1
+  labels:
+    name: dbversion1
+spec:
+  ports:
+    - port: 3306
+  selector:
+    versions: dbversion1
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbversion2
+  labels:
+    name: dbversion2
+spec:
+  ports:
+    - port: 3306
+  selector:
+    versions: dbversion2
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dbversion3
+  labels:
+    name: dbversion3
+spec:
+  ports:
+    - port: 3306
+  selector:
+    versions: dbversion3
+
