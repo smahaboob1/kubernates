@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: appversion1
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        versions: appversion1
+    spec:
+      containers:
+      - image: smahaboob/app1
+        name: appversion1
+        env:
+        - name: "VERSION"
+          value: "appversion1"
+          name: "db"
+          value: "dbversion1"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: appversion2
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        versions: appversion2
+    spec:
+      containers:
+      - image: smahaboob/app1
+        name: appversion2
+        env:
+        - name: "VERSION"
+          value: "appversion2"
+          name: "db"
+          value: "dbversion2"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: appversion3
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        versions: appversion3
+    spec:
+      containers:
+      - image: smahaboob/app1
+        name: appversion3
+        env:
+        - name: "VERSION"
+          value: "appversion3"
+          name: "db"
+          value: "dbversion3"
+        ports:
+        - containerPort: 8080
+
+
