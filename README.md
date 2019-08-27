@@ -113,9 +113,12 @@ Using LoadBalencer:
 -------------------
     kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.1/manifests/metallb.yaml
     kubectl get all -n metallb-system
-    kubectl create -f loadbalancer.yaml
+    kubectl create -f loadbalancer.yaml                         --------> Change IP range according to the Kubernetes cluster IP range
     kubectl describe configmap config -n metallb-system
     
+    kubectl create -f rc_svc_example_pod.yaml
+    kubectl create -f rc_svc_example_svc.yaml
+    kubectl create -f rc_svc_example_rc.yaml
     
     http://172.42.42.200/employee-management-0.0.1-SNAPSHOT/departments
     
