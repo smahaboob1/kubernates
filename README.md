@@ -79,12 +79,28 @@ Service Types:
     NodePort
     LoadBalancer
     
-Using NodePort:
---------------
 https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
+
+    Using NodePort, POD and Service:
+    --------------------------------
 
     kubectl create -f rc_svc_example_pod.yaml
     kubectl create -f rc_svc_example_svc.yaml
+
+    http://kmaster:31001/employee-management-0.0.1-SNAPSHOT/employees
+    http://kmaster:31002/employee-management-0.0.1-SNAPSHOT/employees
+    http://kmaster:31003/employee-management-0.0.1-SNAPSHOT/employees
+
+    http://kmaster:31001/employee-management-0.0.1-SNAPSHOT/departments
+    http://kmaster:31002/employee-management-0.0.1-SNAPSHOT/departments
+    http://kmaster:31003/employee-management-0.0.1-SNAPSHOT/departments
+    
+    Using NodePort, POD, Service and Replication Controller:
+    -------------------------------------------------------
+    kubectl create -f rc_svc_example_pod.yaml
+    kubectl create -f rc_svc_example_svc.yaml
+    kubectl create -f rc_svc_example_rc.yaml
+
     http://kmaster:31001/employee-management-0.0.1-SNAPSHOT/employees
     http://kmaster:31002/employee-management-0.0.1-SNAPSHOT/employees
     http://kmaster:31003/employee-management-0.0.1-SNAPSHOT/employees
