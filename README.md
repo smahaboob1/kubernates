@@ -111,3 +111,11 @@ https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
 
 Using LoadBalencer:
 -------------------
+    kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.1/manifests/metallb.yaml
+    kubectl get all -n metallb-system
+    kubectl create -f loadbalancer.yaml
+    kubectl describe configmap config -n metallb-system
+    
+    
+    http://172.42.42.200/employee-management-0.0.1-SNAPSHOT/departments
+    
