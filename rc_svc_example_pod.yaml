@@ -1,0 +1,93 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: appversion1
+  labels:
+    versions: appversion1
+spec:
+  containers:
+    - image: smahaboob/app1
+      name: appversion1
+      env:
+      - name: "VERSION"
+        value: "appversion1"
+        name: "db"
+        value: "dbversion1"
+      ports:
+      - containerPort: 8080
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dbversion1
+  labels:
+    versions: dbversion1
+spec:
+  containers:
+  - name: dbversion1
+    image: smahaboob/db:v1
+    ports:
+    - containerPort: 3306
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: appversion2
+  labels:
+    versions: appversion2
+spec:
+  containers:
+    - image: smahaboob/app1
+      name: appversion2
+      env:
+      - name: "VERSION"
+        value: "appversion2"
+        name: "db"
+        value: "dbversion2"
+      ports:
+      - containerPort: 8080
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dbversion2
+  labels:
+    versions: dbversion2
+spec:
+  containers:
+  - name: dbversion2
+    image: smahaboob/db:v2
+    ports:
+    - containerPort: 3306
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: appversion3
+  labels:
+    versions: appversion3
+spec:
+  containers:
+    - image: smahaboob/app1
+      name: appversion3
+      env:
+      - name: "VERSION"
+        value: "appversion3"
+        name: "db"
+        value: "dbversion3"
+      ports:
+      - containerPort: 8080
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dbversion3
+  labels:
+    versions: dbversion3
+spec:
+  containers:
+  - name: dbversion3
+    image: smahaboob/db:v3
+    ports:
+    - containerPort: 3306
+
