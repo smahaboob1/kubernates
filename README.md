@@ -109,8 +109,8 @@ https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
     http://kmaster:31002/employee-management-0.0.1-SNAPSHOT/departments
     http://kmaster:31003/employee-management-0.0.1-SNAPSHOT/departments
 
-Using LoadBalencer:
--------------------
+    Using NodePort, POD, Service,  Replication Controller and LoadBalencer:
+    -----------------------------------------------------------------------
     kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.8.1/manifests/metallb.yaml
     kubectl get all -n metallb-system
     kubectl create -f loadbalancer.yaml                         --------> Change IP range according to the Kubernetes cluster IP range
