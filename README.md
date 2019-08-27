@@ -74,7 +74,14 @@ Replicaion Controller Example
     
 Replication Contoller and Service Example:
 -----------------------------------------
-    https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
+Service Types:
+    ClusterIP
+    NodePort
+    LoadBalancer
+    
+Using NodePort:
+--------------
+https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
 
     kubectl create -f rc_svc_example_pod.yaml
     kubectl create -f rc_svc_example_svc.yaml
@@ -85,3 +92,6 @@ Replication Contoller and Service Example:
     http://kmaster:31001/employee-management-0.0.1-SNAPSHOT/departments
     http://kmaster:31002/employee-management-0.0.1-SNAPSHOT/departments
     http://kmaster:31003/employee-management-0.0.1-SNAPSHOT/departments
+
+Using LoadBalencer:
+-------------------
