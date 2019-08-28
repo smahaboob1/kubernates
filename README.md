@@ -122,3 +122,14 @@ https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
     
     http://172.42.42.200/employee-management-0.0.1-SNAPSHOT/departments
     
+Deployments Example:
+---------------------
+    kubectl apply -f deploy_app_pod_svc_v1.yaml
+    kubectl apply -f deploy_db_pod_svc_v1.yaml
+    http://kmaster:<port>/employee-management-0.0.1-SNAPSHOT/employees
+    kubectl apply -f deploy_db_pod_svc_v2.yaml
+    http://kmaster:<port>/employee-management-0.0.1-SNAPSHOT/employees
+    kubectl apply -f deploy_db_pod_svc_v1.yaml
+    http://kmaster:<port>/employee-management-0.0.1-SNAPSHOT/employees
+    
+
