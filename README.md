@@ -124,6 +124,12 @@ https://github.com/smahaboob1/kubernates/blob/master/services_example.jpg
     
 Deployments Example:
 ---------------------
+    create deployment
+    update deployment
+    perform rolling update
+    perform rollback
+    pause and resume a deployment
+
     kubectl apply -f deploy_app_pod_svc_v1.yaml
     kubectl apply -f deploy_db_pod_svc_v1.yaml
     http://kmaster:<port>/employee-management-0.0.1-SNAPSHOT/employees
