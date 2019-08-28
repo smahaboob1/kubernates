@@ -140,4 +140,28 @@ Deployments Example:
     
 Storage and Persistence
 -----------------------
-
+    kubectl create -f app_storage_pod_svc.yaml
+    kubectl create -f db_storage_pod_svc.yaml
+    kubectl describe pod tomcat-pod
+       
+    vim app_storage_pod_svc.yaml
+    mountPath: /usr/local/tomcat/logs/              ---> Path in the tomcat container
+    path: /home/vagrant/tomcat-storage/             ---> Host Path
+    
+    kubectl describe pod tomcat-pod | grep Node:
+    ssh to node
+    cd /home/vagrant/tomcat-storage/ 
+    touch abc{1..3}.txt                             
+    kubectl exec -ti tomcat-pod --container tomcat bash
+    cd /usr/local/tomcat/logs/                      ---> abc{1..3}.txt and all tomcat logs should be accessible
+    touch abc{4..6}.txt 
+    exit from container
+    cd /home/vagrant/tomcat-storage/                ---> abc{4..6}.txt and all tomcat logs should be accessible
+    
+    kubectl delete -f app_storage_pod_svc.yaml
+    kubectl delete -f db_storage_pod_svc.yaml
+    /home/vagrant/tomcat-storage                    ---> Data (tomcat logs and abc...txt files should be available)
+    
+    
+    
+    
