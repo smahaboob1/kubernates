@@ -1,6 +1,44 @@
-git clone https://github.com/smahaboob1/employee-management.git
+Kubernetes Intallation :
+------------------------
+Install Vagrant
+https://shaikperformancedevops.blogspot.com/2019/05/5-install-vagrant.html
 
-mvn install
+git pull https://github.com/smahaboob1/kubernates.git
+cd vagrent_provision
+vagrant up
+
+Install Kubernetes Dashboard Web UI
+------------------------------------
+kubectl cluster-info
+git clone https://github.com/justmeandopensource/kubernetes.git
+cd kubernetes/dashboard
+
+Install Influxdb
+-----------------
+kubectl -n kube-system get pods -o wide
+kubectl create -f influxdb.yaml
+kubectl -n kube-system get pods -o wide
+
+Install heapster
+-----------------
+kubectl -n kube-system get pods -o wide
+kubectl create -f heapster.yaml
+kubectl -n kube-system get pods -o wide
+
+Install Dashboard
+-----------------
+kubectl -n kube-system get pods -o wide
+kubectl create -f dashboard.yaml
+kubectl -n kube-system get pods -o wide
+kubectl cluster-info
+
+kubectl create -f sa_cluster_admin.yaml
+kubectl describe sa dashboard-admin -n kube-system
+Mountable secrets:   dashboard-admin-token-5bnv7
+kubectl describe secret dashboard-admin-token-5bnv7 -n kube-system
+
+https://kmaster:32323
+Enter key value
 
 Create docker image :
 ----------------------
