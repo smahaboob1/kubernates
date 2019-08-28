@@ -1,0 +1,11 @@
+Setup Kubernetes using vagrant
+
+172.42.42.100       -     kmaster     ----> this is kubernetes master
+172.42.42.101       -     kworker1     ----> this is kubernetes worker1
+172.42.42.102       -     kworker2     ----> this is kubernetes worker2
+
+For adding more nodes:
+Open Vagrantfile and update count in the following parameter
+
+NodeCount = 2
+
