@@ -138,4 +138,6 @@ Deployments Example:
     kubectl apply -f deploy_db_pod_svc_v1.yaml
     http://kmaster:<port>/employee-management-0.0.1-SNAPSHOT/employees
     
+Storage and Persistence
+-----------------------
 
