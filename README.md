@@ -200,6 +200,8 @@ Storage and Persistence
     kubectl delete -f db_storage_pod_svc.yaml
     /home/vagrant/tomcat-storage                    ---> Data (tomcat logs and abc...txt files should be available)
     
+    Setup NFS (Network File System) on RHEL/CentOS/Fedora and Debian/Ubuntu
+    -----------------------------------------------------------------------
     
     
     
