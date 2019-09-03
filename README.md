@@ -3,7 +3,7 @@ Kubernetes Intallation :
     Install Vagrant
     https://shaikperformancedevops.blogspot.com/2019/05/5-install-vagrant.html
 
-    git pull https://github.com/smahaboob1/kubernates.git
+    git clone https://github.com/smahaboob1/kubernates.git
     cd vagrent_provision
     vagrant up
 
@@ -202,6 +202,10 @@ Storage and Persistence
     
     Setup NFS (Network File System) on RHEL/CentOS/Fedora and Debian/Ubuntu
     -----------------------------------------------------------------------
+    https://www.howtoforge.com/nfs-server-and-client-on-centos-7
     
     
+ Configuring & Deploying StatefulSets
+ ------------------------------------
+ 
     
