@@ -11,7 +11,7 @@ Install Kubernetes Dashboard Web UI
 ------------------------------------
     kubectl cluster-info
     git clone https://github.com/smahaboob1/kubernates.git
-    cd kubernetes/dashboard
+    cd kubernetes/Dashboard
 
     Install Influxdb
     -----------------
