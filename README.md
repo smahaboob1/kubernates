@@ -19,7 +19,15 @@ Kubernetes Intallation with Rancher:
     https://kdocker
     Enter IP address (172.42.42.103) in server URL
     reset password
-
+    click on Add Cluster
+    Choose Import Option
+    Enter Clustename
+    Enter following URL by connecting to kmaster
+    curl --insecure -sfL https://172.42.42.103/v3/import/qsgf4spk7flvqs7zvgpjgvdsrs9cpx2pp966ls4rjc2vgsjz9fxkpj.yaml | kubectl apply -f -
+    NOTE: above URL very for each cluster setup, please copy right one that is generated at the time of cluster creation
+    kubectl get all -o wide -n cattle-system
+   
+    
 Install Kubernetes Dashboard Web UI
 ------------------------------------
     kubectl cluster-info
