@@ -7,6 +7,19 @@ Kubernetes Intallation :
     cd vagrent_provision
     vagrant up
 
+Kubernetes Intallation with Rancher:
+------------------------------------
+    git clone https://github.com/smahaboob1/kubernates.git
+    cd vagrent_provision
+    mv Vagrantfile Vagrantfile_bkp
+    mv Vagrantfile_rancher Vagrantfile
+    vagrant up
+    vagrant ssh kdocker
+    sudo docker run -d --restart=unless-stopped -p 80:80 -v /opt/rancher:/var/lib/rancher -p 443:443 rancher/rancher
+    https://kdocker
+    Enter IP address (172.42.42.103) in server URL
+    reset password
+
 Install Kubernetes Dashboard Web UI
 ------------------------------------
     kubectl cluster-info
